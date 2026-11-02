@@ -1,20 +1,76 @@
 ﻿
 @{
     ViewData["Title"] = "Products";
+
+    string[] products =
+    {
+        "Water",
+        "Orange Juice",
+        "Coffee",
+        "Sandwich",
+        "Chocolate"
+    };
 }
 
-<h1>Cafeteria Products</h1>
+<div class="products-page">
 
-<p>Available products in the university cafeteria:</p>
+    <h1>Cafeteria Products</h1>
 
-<ul>
-    <li>Water</li>
-    <li>Juice</li>
-    <li>Sandwiches</li>
-    <li>Chips</li>
-    <li>Coffee</li>
-</ul>
+    <p>
+        Available products in the university cafeteria:
+    </p>
 
-<a asp-controller="Cafeteria" asp-action="Index">
-    Back to Home
-</a>
+    <ul class="product-list">
+        @foreach (string product in products)
+        {
+            <li>@product</li>
+        }
+    </ul>
+
+    <hr />
+
+    @if (products.Length > 0)
+    {
+        <p class="text-success">
+            Products are available.
+        </p>
+    }
+    else
+    {
+        <p class="text-danger">
+            No products available.
+        </p>
+    }
+
+    @if (products.Length >= 3)
+    {
+        <h3 class="text-success">
+            We have enough Products.
+        </h3>
+    }
+    else
+    {
+        <h3 class="text-danger">
+            We need more Products.
+        </h3>
+    }
+
+    <a class="btn btn-primary mt-3"
+       asp-controller="Cafeteria"
+       asp-action="Index">
+        Back to Home
+    </a>
+
+</div>
+
+@section Styles {
+    <link rel="stylesheet"
+          href="~/css/products.css"
+          asp-append-version="true" />
+}
+
+@section Scripts {
+    <script>
+        alert("Welcome to the Products Page!");
+    </script>
+}

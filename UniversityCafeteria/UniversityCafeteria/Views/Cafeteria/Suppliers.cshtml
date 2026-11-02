@@ -1,6 +1,14 @@
 ﻿
 @{
     ViewData["Title"] = "Suppliers";
+    Layout = "/Views/Shared/_SimpleLayout.cshtml";
+
+    string[] suppliers =
+    {
+        "Fresh Food Company",
+        "Happy Drinks Company",
+        "Daily Supplies Company"
+    };
 }
 
 <h1>Cafeteria Suppliers</h1>
@@ -8,10 +16,20 @@
 <p>Our cafeteria works with the following suppliers:</p>
 
 <ul>
-    <li>Fresh Food Supplier</li>
-    <li>Drinks Supplier</li>
-    <li>Bakery Supplier</li>
+    @foreach (string supplier in suppliers)
+    {
+        <li>@supplier</li>
+    }
 </ul>
+
+@if (suppliers.Length >= 3)
+{
+    <p>We have enough suppliers.</p>
+}
+else
+{
+    <p>We need more suppliers.</p>
+}
 
 <a asp-controller="Cafeteria" asp-action="Index">
     Back to Home

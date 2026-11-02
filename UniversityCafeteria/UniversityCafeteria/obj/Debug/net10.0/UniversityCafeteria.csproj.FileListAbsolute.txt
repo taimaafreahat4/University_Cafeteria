@@ -196,3 +196,4 @@ C:\Users\user\Desktop\University_Cafeteria\UniversityCafeteria\UniversityCafeter
 C:\Users\user\Desktop\University_Cafeteria\UniversityCafeteria\UniversityCafeteria\obj\Debug\net10.0\ref\UniversityCafeteria.dll
 C:\Users\user\Desktop\University_Cafeteria\UniversityCafeteria\UniversityCafeteria\obj\Debug\net10.0\Universi.3D4266FD.Up2Date
 C:\Users\user\Desktop\University_Cafeteria\UniversityCafeteria\UniversityCafeteria\obj\Debug\net10.0\compressed\pvshre2o0a-{0}-28z6wte29i-28z6wte29i.gz
+C:\Users\user\Desktop\University_Cafeteria\UniversityCafeteria\UniversityCafeteria\obj\Debug\net10.0\UniversityCafeteria.sourcelink.json
